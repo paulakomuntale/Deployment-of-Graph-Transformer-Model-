@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: menstrual-rag-service
+    env: docker
+    plan: starter # change to a plan you choose
+    repo: https://github.com/paulakomuntale/Deployment-of-Graph-Transformer-Model-.git
+    branch: main
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
